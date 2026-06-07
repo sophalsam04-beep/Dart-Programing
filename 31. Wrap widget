@@ -1,0 +1,61 @@
+import 'package:flutter/material.dart';
+
+void main(List<String> args) {
+  runApp(const App());
+}
+
+class App extends StatelessWidget {
+  const App({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: const HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          children: [
+            SizedBox(height: 90),
+            Column(
+              children: [
+                SizedBox(height: 30),
+                Wrap(
+                  spacing: 16,
+                  runSpacing: 10,
+                  children: [
+                    Chip(label: Text("Flutter")),
+                    Chip(label: Text("Swift")),
+                    Chip(label: Text("Firebase")),
+                    Chip(label: Text("Cloud Firestore")),
+                  ],
+                ),
+
+                Wrap(
+                  spacing: 12,
+                  runSpacing: 12,
+                  children: [
+                    Chip(label: Text("Data science")),
+                    Chip(label: Text("Web development")),
+                    Chip(label: Text("Graphic designer")),
+                    Chip(label: Text("UX/UI Designer")),
+                  ],
+                ),
+                // Responsive layout using to LayoutBuilder
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
