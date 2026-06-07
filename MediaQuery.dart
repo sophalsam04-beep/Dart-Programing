@@ -68,6 +68,27 @@ class _HomepageState extends State<Homepage> {
                 height: MediaQuery.of(context).size.height / 5,
               ),
             ),
+
+
+
+             OrientationBuilder(
+              builder: (context, orientation) {
+                if (orientation == Orientation.portrait) {
+                  return Center(child: Text("Portrait Mode"));
+                } else {
+                  return Center(child: Text("Landscape"));
+                }
+              },
+            ),
+            OrientationBuilder(
+              builder: (context, orientation) {
+                if (Orientation == Orientation.landscape) {
+                  return Center(child: Text("Portait Mode"));
+                } else {
+                  return Center(child: Text("Landscape"));
+                }
+              },
+            ),
           ],
         ),
       ),
